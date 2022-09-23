@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://Java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+ <servlet>
+    <!-- <description></description>
+    <display-name>DispatcherServlet</display-name> 이 두줄은 제거해도 무방-->
+    <servlet-name>DispatcherServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping><!-- 요청에 따라 매핑 -->
+    <servlet-name>DispatcherServlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 필터 등록 -->
+  <filter>
+  	<filter-name>characterEncodingFilter</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class><!-- Spring에서 재공하는 필터 클래스 -->
+  	<init-param>
+  		<param-name>encoding</param-name><!-- encoding으로 이름이 정해져있음 (너네 인코딩으로 필터 쓸 거 잖아) -->
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping><!-- 요청에 따라 매핑 -->
+  	<filter-name>characterEncodingFilter</filter-name>
+  	<url-pattern>*.do</url-pattern>
+  	<url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+	
+</web-app>

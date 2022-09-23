@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+<context:component-scan base-package="com.kim.biz"/>
+
+<!--   
+    HandlerMapping 객체 생성
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/login.do">login</prop>
+				<prop key="/main.do">main</prop>
+				<prop key="/board.do">board</prop>
+				<prop key="/logout.do">logout</prop>
+				<prop key="/signUp.do">signUp</prop>
+				<prop key="/updateM.do">updateM</prop>
+				<prop key="/delete.do">delete</prop>
+			</props>
+		</property>
+	</bean>
+   
+   Controller객체 등록
+   <bean id="login" class="com.jang.biz.controller.LoginController"/>
+   <bean id="main" class="com.jang.biz.controller.MainController"/>
+   <bean id="board" class="com.jang.biz.controller.BoardController"/>
+   <bean id="logout" class="com.jang.biz.controller.LogoutController"/>
+   <bean id="signUp" class="com.jang.biz.controller.SignUpController"/>
+   <bean id="updateM" class="com.jang.biz.controller.UpdateMemberController"/>
+   <bean id="delete" class="com.jang.biz.controller.DeleteController"/>
+   
+   ViewResolver 등록
+   <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <property name="prefix" value="/WEB-INF/view/" />
+      <property name="suffix" value=".jsp" />
+   </bean> 
+   -->
+   
+   
+   
+</beans>
